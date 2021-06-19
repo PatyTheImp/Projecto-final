@@ -67,6 +67,15 @@ a {
     to {margin-left: -160%;}
 }
 
+.carousel p {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    margin: 0;
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+
 #intro {
     padding: 25px;
 }
