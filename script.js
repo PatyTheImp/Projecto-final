@@ -1,68 +1,50 @@
-function abrir(x) {
+const section = document.querySelector('.galeria-selected');
+const body = document.querySelector('#id-body');
+const btnFechar = document.querySelector('.btn-fechar');
+const img = document.querySelector("#img-selected");
+const galeriaImg = document.querySelectorAll('.galeria-img');
+const mobNav = document.querySelector("#mob-nav");
+const burgerMenu = document.querySelector('.burger-menu');
+const navbuttons = document.querySelector('.navbuttons');
 
-    var section = document.getElementById("galeria-selected");
-    var img = document.getElementById("img-selected");
-    var body = document.getElementById("id-body");
+const abrirImg = function(e){
 
-    img.src = x.src;
+    const selectedImg = e.target.getAttribute('src');
+    img.src = selectedImg;
 
     // Para a função apenas funcionar na versão desktop
     if (!window.matchMedia("(max-width: 768px)").matches) {
 
-        section.style.visibility = "visible";
-        body.style.overflowY = "hidden"; //Para esconder a scrollbar lateral 
+        section.classList.remove('escondido');
+        body.classList.add('barra-y-escondida');
     }
 }
 
-function fechar() {
+galeriaImg.forEach(imagem => imagem.addEventListener('click', abrirImg));
 
-    var section = document.getElementById("galeria-selected");
-    var body = document.getElementById("id-body");
 
-    section.style.visibility = "hidden";
-    body.style.overflowY = "visible"; 
+btnFechar.addEventListener('click', function(){
+
+    section.classList.add('escondido');
+    body.classList.remove('barra-y-escondida');
+});
+
+burgerMenu.addEventListener('click', function(){
+
+    mobNav.classList.toggle('mob-nav-show');
+});
+
+//Smooth scrolling
+const smoothScroll = function(e){
+
+    const clicked = e.target.closest('a');
+    if (!clicked) return;
+
+    e.preventDefault();
+
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({behavior: 'smooth'});
 }
 
-function registar() {
-    
-    var aviso = document.getElementById("doc-aviso");
-    var form = document.getElementById("formulario");
-    var nome = document.getElementById("txtnome").value;
-    var email = document.getElementById("txtmail").value;
-
-    if (nome == "" || email == "") {
-        aviso.innerHTML = "<p>Preencha os dois campos antes de concluir o registo</p>";
-    }
-
-    else if (!email.includes("@") || !email.includes(".")) {
-        aviso.innerHTML = "<p>Introduza um e-mail válido por favor</p>";
-    }
-
-    else {
-        form.innerHTML = "<h3>O seu registo foi efetuado com sucesso!</h3>";
-    }
-}
-
-function burgerMenu() {
-
-    var mobNav = document.getElementById("mob-nav");
-    var checkStyle = window.getComputedStyle(mobNav);
-    var checkPropriedade = checkStyle.getPropertyValue("display");
-    
-    //Se o dropdown menu não estiver visível mostrá-lo, se estiver visivel escondê-lo
-    if (checkPropriedade == "none") 
-        mobNav.style.display = "block";
-    else 
-        mobNav.style.display = "none";        
-}
-
-function burgerSubMenu(drop) {
-    var subMenu = document.getElementById(drop);
-    var checkStyle = window.getComputedStyle(subMenu);
-    var checkPropriedade = checkStyle.getPropertyValue("display");
-
-    if (checkPropriedade == "none") 
-        subMenu.style.display = "block";
-    else 
-        subMenu.style.display = "none"; 
-}
+navbuttons.addEventListener('click', smoothScroll);
+mobNav.addEventListener('click', smoothScroll);

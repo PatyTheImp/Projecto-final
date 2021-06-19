@@ -9,42 +9,35 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body id="id-body">
     
     <!-- Barra superior -->
     <header>
-        <div id="logo"><a href="index.html"><img src="imagens/LOGO.png" alt="logo"></a></div>
+        <div>
+            <a href="index.html" id="logo">
+                <img src="imagens/girl_walking.gif" alt="logo" height="64px">
+                <p>Paty Arts</p>
+            </a>
+        </div>
 
-        <nav>
+        <nav class="navbuttons">
             <div class="navbutton">
-                <a href="#texturas-div">DESENHOS</a>
-
-                <div class="dropdown">
-                    <div class="navbutton"><a href="#texturas-div">TEXTURAS</a></div>
-                    <div class="navbutton"><a href="#objectos-div">OBJECTOS</a></div>
-                    <div class="navbutton"><a href="#personagens-div">PERSONAGENS</a></div>
-                </div>
+                <a href="#texturas-div">DRAWINGS</a>
             </div>
 
             <div class="navbutton">
-                <a href="#simples-div">ANIMAÇÕES</a>
-
-                <div class="dropdown">
-                    <div class="navbutton"><a href="#simples-div">SIMPLES</a></div>
-                    <div class="navbutton"><a href="#16x16-div">16X16</a></div>
-                    <div class="navbutton"><a href="#32x32-div">32X32</a></div>
-                </div>
+                <a href="#simples-div">ANIMATIONS</a>
             </div>
 
             <div class="navbutton">
-                <a href="#sobre-mim-div">SOBRE MIM</a>
+                <a href="#sobre-mim-div">ABOUT ME</a>
             </div>
 
             <div class="navbutton">
-                <a href="#registo-div">REGISTO</a>
+                <a href="#registo-div">CONTACT</a>
             </div>
 
             <div class="navbutton">
@@ -55,35 +48,23 @@
         <!-- Só aparece na versão mobile -->
         <div id="mob-wrapper"> 
 
-            <img onclick="burgerMenu();" src="imagens/icon-burger-menu.svg" alt="Mobile Menu Icon" style="width: 40px;" class="burger-menu">
+            <img src="imagens/icon-burger-menu.svg" alt="Mobile Menu Icon" style="width: 40px;" class="burger-menu">
 
-            <div id="mob-nav">
+            <div id="mob-nav" class="mob-nav-hide">
                 <div class="nav-button">
-                    <a onclick="burgerSubMenu('drop-desenhos');">DESENHOS</a>
-    
-                    <div id="drop-desenhos">
-                        <div class="nav-button"><a href="#texturas-div">TEXTURAS</a></div>
-                        <div class="nav-button"><a href="#objectos-div">OBJECTOS</a></div>
-                        <div class="nav-button"><a href="#personagens-div">PERSONAGENS</a></div>
-                    </div>
+                    <a href="#texturas-div">DRAWINGS</a>
                 </div>
     
                 <div class="nav-button">
-                    <a onclick="burgerSubMenu('drop-anim');">ANIMAÇÕES</a>
-    
-                    <div id="drop-anim">
-                        <div class="nav-button"><a href="#simples-div">SIMPLES</a></div>
-                        <div class="nav-button"><a href="#16x16-div">16X16</a></div>
-                        <div class="nav-button"><a href="#32x32-div">32X32</a></div>
-                    </div>
+                    <a href="#simples-div">ANIMATIONS</a>
                 </div>
     
                 <div class="nav-button">
-                    <a href="#sobre-mim-div">SOBRE MIM</a>
+                    <a href="#sobre-mim-div">ABOUT ME</a>
                 </div>
     
                 <div class="nav-button">
-                    <a href="#registo-div">REGISTO</a>
+                    <a href="#registo-div">CONTACT</a>
                 </div>
     
                 <div class="nav-button">
@@ -100,8 +81,8 @@
 
     <!-- Introdução -->
     <div id="intro">
-        <p>Bem-vindo(a) ao meu pequeno <b>jardim de pixels</b> </p>
-        <p>Sou uma artista de pixels amadora e espero que gostes do meu trabalho ;)</p>
+        <p>Welcome to my little <b>pixel garden</b> </p>
+        <p>I'm an amatour pixel artist and I hope you enjoy my work  ;)</p>
     </div>
 
     <hr>
@@ -110,176 +91,176 @@
     <div id="galeria">
 
         <div class="titulos">
-            <h1 id="texturas-div">Desenhos</h1>
+            <h1 id="texturas-div">Drawings</h1>
         </div>
 
-        <h2>Texturas</h2>
+        <h2>Textures</h2>
         <div class="galeria-linha">
             <div>
-                <img onclick="abrir(this);" src="imagens/silver_texture.png" alt="">
-                <p>Textura de prata</p>
+                <img class="galeria-img" src="imagens/silver_texture.png" alt="">
+                <p>Silver texture</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/bush_dif_hue.png" alt="">
-                <p>Textura de folhas</p>
+                <img class="galeria-img" src="imagens/bush_dif_hue.png" alt="">
+                <p>Grass texture</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/wood_texture.png" alt="">
-                <p>Textura de madeira</p>
+                <img class="galeria-img" src="imagens/wood_texture.png" alt="">
+                <p>Wood texture</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>      
             <div>
-                <img onclick="abrir(this);" src="imagens/gold_texture.png" alt="">
-                <p id="objectos-div">Textura de ouro</p>
+                <img class="galeria-img" src="imagens/gold_texture.png" alt="">
+                <p id="objectos-div">Gold texture</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
         </div>
 
-        <h2>Objectos</h2>
+        <h2>Objects</h2>
         <div class="galeria-linha">
             <div>
-                <img onclick="abrir(this);" src="imagens/laranja.png" alt="">
-                <p>Laranja</p>
+                <img class="galeria-img" src="imagens/laranja.png" alt="">
+                <p>Oranje</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/maca.png" alt="">
-                <p>Maçã</p>
+                <img class="galeria-img" src="imagens/maca.png" alt="">
+                <p>Apple</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/livro.png" alt="">
-                <p>Livro</p>
+                <img class="galeria-img" src="imagens/livro.png" alt="">
+                <p>Book</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/vinho.png" alt="">
-                <p>Garrafa de vinho</p>
+                <img class="galeria-img" src="imagens/vinho.png" alt="">
+                <p>Wine bottle</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
         </div>
 
         <div class="galeria-linha">
             <div>
-                <img onclick="abrir(this);" src="imagens/armas.png" alt="">
-                <p>Armas contemporâneas</p>
+                <img class="galeria-img" src="imagens/armas.png" alt="">
+                <p>Modern guns</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/armas_scifi.png" alt="">
-                <p>Armas Sci-Fi</p>
+                <img class="galeria-img" src="imagens/armas_scifi.png" alt="">
+                <p>Sci-Fi guns</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/espada.png" alt="">
-                <p>Espada de platina</p>
+                <img class="galeria-img" src="imagens/espada.png" alt="">
+                <p>Platinum sword</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/espada_jade.png" alt="">
-                <p id="personagens-div">Espada jade</p>
+                <img class="galeria-img" src="imagens/espada_jade.png" alt="">
+                <p id="personagens-div">Jade sword</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
         </div>
 
-        <h2>Personagens</h2>
+        <h2>Characters</h2>
         <div class="galeria-linha">
             <div>
-                <img onclick="abrir(this);" src="imagens/raparigas.png" alt="">
-                <p>Meninas</p>
+                <img class="galeria-img" src="imagens/raparigas.png" alt="">
+                <p>Girls</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/rapazes.png" alt="">
-                <p>Meninos</p>
+                <img class="galeria-img" src="imagens/rapazes.png" alt="">
+                <p>Boys</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/homem_casual.png" alt="">
-                <p>Homem casual</p>
+                <img class="galeria-img" src="imagens/homem_casual.png" alt="">
+                <p>Casual guy</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/homen_negocios.png" alt="">
-                <p>Homem de negócios</p>
+                <img class="galeria-img" src="imagens/homen_negocios.png" alt="">
+                <p>Business man</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
         </div>
 
         <div class="titulos">
-            <h1 id="simples-div">Animações</h1>
+            <h1 id="simples-div">Animations</h1>
         </div>
 
-        <h2>Animações simples</h2>
+        <h2>Simple animations</h2>
         <div class="galeria-linha">
             <div>
-                <img onclick="abrir(this);" src="imagens/silver_cube_bg.gif" alt="">
-                <p>Cubo brilhante</p>
+                <img class="galeria-img" src="imagens/silver_cube_bg.gif" alt="">
+                <p>Sparkly cube</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/cube_animation2.gif" alt="">
-                <p>Cubo a rodar</p>
+                <img class="galeria-img" src="imagens/cube_animation2.gif" alt="">
+                <p>Cube rotating</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/8x8attack.gif" alt="">
-                <p>8x8 ataque</p>
+                <img class="galeria-img" src="imagens/8x8attack.gif" alt="">
+                <p>8x8 atack</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/8x8walk.gif" alt="">
-                <p id="16x16-div">8x8 andar</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-        </div>
-
-        <h2>Animações 16x16</h2>
-        <div class="galeria-linha">
-            <div>
-                <img onclick="abrir(this);" src="imagens/bluehair_walk.gif" alt="">
-                <p>Menina a andar</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img onclick="abrir(this);" src="imagens/bluehair_run.gif" alt="">
-                <p>Menina a correr</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img onclick="abrir(this);" src="imagens/glasses_walk.gif" alt="">
-                <p>4-olhos a andar</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img onclick="abrir(this);" src="imagens/glasses_run.gif" alt="">
-                <p id="32x32-div">4-olhos a correr</p>
+                <img class="galeria-img" src="imagens/8x8walk.gif" alt="">
+                <p id="16x16-div">8x8 walk</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
         </div>
 
-        <h2>Animações 32x32</h2>
+        <h2>16x16 animations</h2>
         <div class="galeria-linha">
             <div>
-                <img onclick="abrir(this);" src="imagens/32x32attack.gif" alt="">
-                <p>Ataque com espada</p>
+                <img class="galeria-img" src="imagens/bluehair_walk.gif" alt="">
+                <p>Girl walking</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/woman_run.gif" alt="">
-                <p>Mulher de negócios a correr</p>
+                <img class="galeria-img" src="imagens/bluehair_run.gif" alt="">
+                <p>Girl running</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/space_walk.gif" alt="">
-                <p>Mulher a andar</p>
+                <img class="galeria-img" src="imagens/glasses_walk.gif" alt="">
+                <p>Four eyes walking</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
             <div>
-                <img onclick="abrir(this);" src="imagens/space_run.gif" alt="">
-                <p>Mulher a correr</p>
+                <img class="galeria-img" src="imagens/glasses_run.gif" alt="">
+                <p id="32x32-div">Four eyes running</p>
+                <p class="assinatura">by Paty Costa</p>
+            </div>
+        </div>
+
+        <h2>32x32 animations</h2>
+        <div class="galeria-linha">
+            <div>
+                <img class="galeria-img" src="imagens/32x32attack.gif" alt="">
+                <p>Sword atack</p>
+                <p class="assinatura">by Paty Costa</p>
+            </div>
+            <div>
+                <img class="galeria-img" src="imagens/woman_run.gif" alt="">
+                <p>Business woman running</p>
+                <p class="assinatura">by Paty Costa</p>
+            </div>
+            <div>
+                <img class="galeria-img" src="imagens/space_walk.gif" alt="">
+                <p>Woman walking</p>
+                <p class="assinatura">by Paty Costa</p>
+            </div>
+            <div>
+                <img class="galeria-img" src="imagens/space_run.gif" alt="">
+                <p>Woman running</p>
                 <p class="assinatura">by Paty Costa</p>
             </div>
         </div>
@@ -287,9 +268,9 @@
     </div>
 
     <!-- Quando se seleciona uma imagem -->
-    <section id="galeria-selected">
+    <section class="galeria-selected escondido">
 
-        <span onclick="fechar();">&#10006;</span>
+        <span class="btn-fechar">&#10006;</span>
         <div>
             <img id="img-selected" src="imagens/32x32attack.gif" alt="">
         </div>
@@ -302,13 +283,13 @@
 
     <!-- Carta de apresentação -->
     <div class="titulos">
-        <h1>Sobre mim</h1>
+        <h1>About me</h1>
     </div>
 
     <div id="sobre-mim">
 
         <img src="imagens/eu.jpg" alt="">
-        <p>Olá, chamo-me Patrícia Costa. Sempre que tenho tempo livre, gosto de me dedicar ao meu hobby de fazer pixel art. A tempos que tenho um objectivo pessoal de fazer um video jogo, por isso decidi aprender pixel art para poder fazer meus próprios assets. Com isso, acabei por me apaixonar pela arte!</p>
+        <p>Hi, my name's Patrícia Costa. Anytime I have free time, I like to dedicate to my pixel art hobby. For a long time, I have a personal goal of making video games. Because of that, I decided to learn pixel art so I could make my own assets. I ended up falling in love with the art!</p>
 
     </div>
 
@@ -318,23 +299,24 @@
 
     <!-- Registo -->
     <div class="titulos">
-        <h1>Registo</h1>
+        <h1>Contact</h1>
     </div>
 
     <div id="registo">
-        <div id="formulario">
-            <h3>Registe-se para receber novidades por e-mail!</h3>
+        <form id="formulario">
+            <h3>Hey! C'mon, send me a message 😉</h3>
 
-            <label for="txtnome">NOME:</label>
-            <input type="text" id="txtnome" placeholder="Paty Costa"> 
+            <label for="txtnome">NAME:</label>
+            <input type="text" id="txtnome" placeholder="Paty Costa" required> 
 
             <label for="txtmail">E-MAIL:</label>
-            <input type="email" id="txtmail" placeholder="paty@gmail.com">
+            <input type="email" id="txtmail" placeholder="paty@gmail.com" required>
 
-            <div id="doc-aviso"></div>
+            <label for="message">MESSAGE:</label>
+            <textarea name="message" cols="30" rows="10" required></textarea>
 
-            <button onclick="registar();">REGISTAR</button>
-        </div>
+            <button class="form-btn" type="submit">SEND</button>
+        </form>
 
         <img src="imagens/analogos_bg.png" alt="ponte 25 de abril" height="50">
     </div>

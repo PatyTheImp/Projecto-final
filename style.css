@@ -1,12 +1,19 @@
+:root {
+    --light: #d5d5d5;
+    --dark: #2a2a2a;
+    --gradient: linear-gradient(45deg, #c31432, #240b36);
+    --borda: 3px;
+}
+
 body {
     margin: 0;
     font-family: 'Exo', sans-serif;
-    background-color: rgb(199, 183, 214);
+    background-image: var(--gradient);
     overflow-x: hidden; /*Para tirar o scrollbar inferior*/
 }
 
 header {
-    background-color: rgb(111, 31, 114);
+    background-color: var(--dark);
     height: 80px;
     position: fixed;
     width: 100%;
@@ -17,49 +24,33 @@ header {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--light);
 }
 
 .navbutton {
     display: inline-block;
-    border: 1px solid;
+    border: 1px solid var(--light);
+    border-radius: var(--borda);
     padding: 10px 25px;
     margin-right: 15px;
-    transition: 1s;
+    font-weight: bold;
+    transition: .3s;
 }
 
 .navbutton:hover {
-    background-color: rgb(153, 64, 156);
-    transition: 1s;
-}
-
-.dropdown {   
-    position: absolute;
-    z-index: 1;
-    padding-top: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.dropdown .navbutton {
-    display: none;
-    width: 120px;
-    background-color: rgb(153, 64, 156);
-    border: none;
-}
-
-.navbutton:hover .dropdown .navbutton {
-    display: block;
-}
-
-.dropdown .navbutton:hover {
-    background-color: rgb(111, 31, 114);
-    transition: 1s;
+    box-shadow: -3px -3px var(--light);
+    transform: translate(3px,3px);
+    transition: .3s;
 }
 
 #logo {
     margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    color: var(--light);
+    font-size: 30px;
 }
 
 #slide-part1 {
@@ -129,6 +120,7 @@ hr {
 .galeria-linha div p {
     color: white;
     padding-left: 10px;
+    transition: .3s;
 }
 
 .assinatura {
@@ -136,21 +128,21 @@ hr {
 }
 
 .galeria-linha img:hover {
-    border-bottom: 5px solid rgb(53, 52, 52);
-    border-left: 5px solid rgb(53, 52, 52);
+    border-top: 10px solid rgba(0, 0, 0, 0);
+    border-left: 10px solid rgba(0, 0, 0, 0);
+    transition: .3s;
 }
 
-#galeria-selected {
+.galeria-selected {
     background-color: rgba(40, 40, 40, .9);
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     filter: grayscale(0%);
-    visibility: hidden;
 }
 
-#galeria-selected div {
+.galeria-selected div {
     width: 40%;
     position: absolute;
     left: 30%;
@@ -158,11 +150,11 @@ hr {
     transform: translateY(-50%);
 }
 
-#galeria-selected img {
+.galeria-selected img {
     width: 100%;
 }
 
-#galeria-selected span {
+.galeria-selected span {
     color: white;
     font-size: 200%;
     position: absolute;
@@ -197,9 +189,9 @@ hr {
     align-items: center;
 }
 
-#registo input {
+#registo input, textarea, button {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 #formulario {
@@ -212,20 +204,23 @@ hr {
     flex: 2;
 }
 
-#formulario button {
+.form-btn {
     text-decoration: none;
-    color: black;
+    border-radius: var(--borda);
     display: inline-block;
     border: 1px solid;
     padding: 10px 25px;
     margin-right: 15px; 
     font-family: 'Exo', sans-serif;
-    transition: 1s;
+    font-weight: bold;
+    background-image: var(--gradient);
+    transition: .3s;
 }
 
-#registo button:hover {
-    background-color: rgb(101, 81, 121);
-    transition: 1s;
+.form-btn:hover {
+    box-shadow: -3px -3px;
+    transform: translate(3px,3px);
+    transition: .3s;
 }
 
 #registo-sucesso {
@@ -266,8 +261,18 @@ hr {
     display: none;
 }
 
+/* Classes para DOM manipulation em JS */
+
+.escondido {
+    visibility: hidden;
+}
+
+.barra-y-escondida {
+    overflow-y: hidden;
+}
+
 /* Vista de Tablet */
-@media (max-width: 768px) {
+@media (max-width: 950px) {
 
    header {
         position: relative;
@@ -286,8 +291,12 @@ hr {
         padding-right: 30px;
     }
 
-    #mob-nav {
+    .mob-nav-hide {
         display: none;
+    }
+
+    .mob-nav-show {
+        display: block;
         position: absolute;
         padding-top: 10px;
     }
@@ -302,10 +311,11 @@ hr {
     }
 
     .nav-button {
-        background-color: rgb(153, 64, 156);
+        background-color: #2a2a2a;
         padding: 15px 30px;
         margin-left: -95px;
         text-align: center;
+        font-weight: bold;
     }
 
     .galeria-linha div {
