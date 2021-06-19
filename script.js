@@ -6,6 +6,8 @@ const galeriaImg = document.querySelectorAll('.galeria-img');
 const mobNav = document.querySelector("#mob-nav");
 const burgerMenu = document.querySelector('.burger-menu');
 const navbuttons = document.querySelector('.navbuttons');
+const drawingsTabContainer = document.querySelector('.drawings_tab-container');
+const animationsTabContainer = document.querySelector('.animations_tab-container');
 
 const abrirImg = function(e){
 
@@ -48,3 +50,24 @@ const smoothScroll = function(e){
 
 navbuttons.addEventListener('click', smoothScroll);
 mobNav.addEventListener('click', smoothScroll);
+
+//Mudança de tabs
+const changeTabs = function(e){
+
+    const clicked = e.target.closest(`.${this}_tab`);
+    if (!clicked) return;
+
+    const tabs = document.querySelectorAll(`.${this}_tab`);
+    const content = document.querySelectorAll(`.${this}_content`);
+
+    //Ativar e desativar tabs
+    tabs.forEach(tab => tab.classList.remove(`${this}_tab-active`));
+    clicked.classList.add(`${this}_tab-active`);
+
+    //Ativar e desativar conteúdo
+    content.forEach(c => c.classList.remove(`${this}_content-active`));
+    document.querySelector(`.${this}_content-${clicked.dataset.tab}`).classList.add(`${this}_content-active`);
+}
+
+drawingsTabContainer.addEventListener('click', changeTabs.bind('drawings'));
+animationsTabContainer.addEventListener('click', changeTabs.bind('animations'));

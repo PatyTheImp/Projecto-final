@@ -25,7 +25,7 @@
 
         <nav class="navbuttons">
             <div class="navbutton">
-                <a href="#texturas-div">DRAWINGS</a>
+                <a href="#drawings-title">DRAWINGS</a>
             </div>
 
             <div class="navbutton">
@@ -92,101 +92,117 @@
     <div id="galeria">
 
         <div class="titulos">
-            <h1 id="texturas-div">Drawings</h1>
+            <h1 id="drawings-title">Drawings</h1>
         </div>
 
-        <h2>Textures</h2>
-        <div class="galeria-linha">
-            <div>
-                <img class="galeria-img" src="imagens/silver_texture.png" alt="">
-                <p>Silver texture</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/bush_dif_hue.png" alt="">
-                <p>Grass texture</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/wood_texture.png" alt="">
-                <p>Wood texture</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>      
-            <div>
-                <img class="galeria-img" src="imagens/gold_texture.png" alt="">
-                <p id="objectos-div">Gold texture</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
+        <!-- Tabs para seleção de subcategorias -->
+        <div class="drawings_tab-container">
+            <button class="drawings_tab drawings_tab-active" data-tab="1">Textures</button>
+            <button class="drawings_tab" data-tab="2">Objects</button>
+            <button class="drawings_tab" data-tab="3">Weapons</button>
+            <button class="drawings_tab" data-tab="4">Characters</button>
         </div>
 
-        <h2>Objects</h2>
-        <div class="galeria-linha">
-            <div>
-                <img class="galeria-img" src="imagens/laranja.png" alt="">
-                <p>Oranje</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/maca.png" alt="">
-                <p>Apple</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/livro.png" alt="">
-                <p>Book</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/vinho.png" alt="">
-                <p>Wine bottle</p>
-                <p class="assinatura">by Paty Costa</p>
+        <div class="drawings_content drawings_content-1 drawings_content-active">
+            <div class="galeria-linha">
+                <div>
+                    <img class="galeria-img" src="imagens/silver_texture.png" alt="">
+                    <p>Silver texture</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/bush_dif_hue.png" alt="">
+                    <p>Grass texture</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/wood_texture.png" alt="">
+                    <p>Wood texture</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/gold_texture.png" alt="">
+                    <p id="objectos-div">Gold texture</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
             </div>
         </div>
 
-        <div class="galeria-linha">
-            <div>
-                <img class="galeria-img" src="imagens/armas.png" alt="">
-                <p>Modern guns</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/armas_scifi.png" alt="">
-                <p>Sci-Fi guns</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/espada.png" alt="">
-                <p>Platinum sword</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/espada_jade.png" alt="">
-                <p id="personagens-div">Jade sword</p>
-                <p class="assinatura">by Paty Costa</p>
+        <!-- <h2>Objects</h2> -->
+        <div class="drawings_content drawings_content-2">
+            <div class="galeria-linha">
+                <div>
+                    <img class="galeria-img" src="imagens/laranja.png" alt="">
+                    <p>Oranje</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/maca.png" alt="">
+                    <p>Apple</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/livro.png" alt="">
+                    <p>Book</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/vinho.png" alt="">
+                    <p>Wine bottle</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
             </div>
         </div>
 
-        <h2>Characters</h2>
-        <div class="galeria-linha">
-            <div>
-                <img class="galeria-img" src="imagens/raparigas.png" alt="">
-                <p>Girls</p>
-                <p class="assinatura">by Paty Costa</p>
+        <!-- Weapons -->
+        <div class="drawings_content drawings_content-3">
+            <div class="galeria-linha">
+                <div>
+                    <img class="galeria-img" src="imagens/armas.png" alt="">
+                    <p>Modern guns</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/armas_scifi.png" alt="">
+                    <p>Sci-Fi guns</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/espada.png" alt="">
+                    <p>Platinum sword</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/espada_jade.png" alt="">
+                    <p id="personagens-div">Jade sword</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
             </div>
-            <div>
-                <img class="galeria-img" src="imagens/rapazes.png" alt="">
-                <p>Boys</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/homem_casual.png" alt="">
-                <p>Casual guy</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/homen_negocios.png" alt="">
-                <p>Business man</p>
-                <p class="assinatura">by Paty Costa</p>
+        </div>
+
+        <!-- <h2>Characters</h2> -->
+        <div class="drawings_content drawings_content-4">
+            <div class="galeria-linha">
+                <div>
+                    <img class="galeria-img" src="imagens/raparigas.png" alt="">
+                    <p>Girls</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/rapazes.png" alt="">
+                    <p>Boys</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/homem_casual.png" alt="">
+                    <p>Casual guy</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/homen_negocios.png" alt="">
+                    <p>Business man</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
             </div>
         </div>
 
@@ -194,75 +210,87 @@
             <h1 id="simples-div">Animations</h1>
         </div>
 
-        <h2>Simple animations</h2>
-        <div class="galeria-linha">
-            <div>
-                <img class="galeria-img" src="imagens/silver_cube_bg.gif" alt="">
-                <p>Sparkly cube</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/cube_animation2.gif" alt="">
-                <p>Cube rotating</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/8x8attack.gif" alt="">
-                <p>8x8 atack</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/8x8walk.gif" alt="">
-                <p id="16x16-div">8x8 walk</p>
-                <p class="assinatura">by Paty Costa</p>
+        <div class="animations_tab-container">
+            <button class="animations_tab animations_tab-active" data-tab="1">Simple animations</button>
+            <button class="animations_tab" data-tab="2">16x16 animations</button>
+            <button class="animations_tab" data-tab="3">32x32 animations</button>
+        </div>
+
+        <!-- <h2>Simple animations</h2> -->
+        <div class="animations_content animations_content-1 animations_content-active">
+            <div class="galeria-linha">
+                <div>
+                    <img class="galeria-img" src="imagens/silver_cube_bg.gif" alt="">
+                    <p>Sparkly cube</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/cube_animation2.gif" alt="">
+                    <p>Cube rotating</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/8x8attack.gif" alt="">
+                    <p>8x8 atack</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/8x8walk.gif" alt="">
+                    <p id="16x16-div">8x8 walk</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
             </div>
         </div>
 
-        <h2>16x16 animations</h2>
-        <div class="galeria-linha">
-            <div>
-                <img class="galeria-img" src="imagens/bluehair_walk.gif" alt="">
-                <p>Girl walking</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/bluehair_run.gif" alt="">
-                <p>Girl running</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/glasses_walk.gif" alt="">
-                <p>Four eyes walking</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/glasses_run.gif" alt="">
-                <p id="32x32-div">Four eyes running</p>
-                <p class="assinatura">by Paty Costa</p>
+        <!-- <h2>16x16 animations</h2> -->
+        <div class="animations_content animations_content-2">
+            <div class="galeria-linha">
+                <div>
+                    <img class="galeria-img" src="imagens/bluehair_walk.gif" alt="">
+                    <p>Girl walking</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/bluehair_run.gif" alt="">
+                    <p>Girl running</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/glasses_walk.gif" alt="">
+                    <p>Four eyes walking</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/glasses_run.gif" alt="">
+                    <p id="32x32-div">Four eyes running</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
             </div>
         </div>
 
-        <h2>32x32 animations</h2>
-        <div class="galeria-linha">
-            <div>
-                <img class="galeria-img" src="imagens/32x32attack.gif" alt="">
-                <p>Sword atack</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/woman_run.gif" alt="">
-                <p>Business woman running</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/space_walk.gif" alt="">
-                <p>Woman walking</p>
-                <p class="assinatura">by Paty Costa</p>
-            </div>
-            <div>
-                <img class="galeria-img" src="imagens/space_run.gif" alt="">
-                <p>Woman running</p>
-                <p class="assinatura">by Paty Costa</p>
+        <!-- <h2>32x32 animations</h2> -->
+        <div class="animations_content animations_content-3">
+            <div class="galeria-linha">
+                <div>
+                    <img class="galeria-img" src="imagens/32x32attack.gif" alt="">
+                    <p>Sword atack</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/woman_run.gif" alt="">
+                    <p>Business woman running</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/space_walk.gif" alt="">
+                    <p>Woman walking</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
+                <div>
+                    <img class="galeria-img" src="imagens/space_run.gif" alt="">
+                    <p>Woman running</p>
+                    <p class="assinatura">by Paty Costa</p>
+                </div>
             </div>
         </div>
         
