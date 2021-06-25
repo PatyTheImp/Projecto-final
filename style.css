@@ -72,6 +72,10 @@ a {
     animation-timing-function: linear;
 }
 
+.lazy-img {
+    filter: blur(20px);
+}
+
 #slide-part1.sticky {
     margin-top: 80px;
 }
@@ -101,6 +105,15 @@ a {
 
 hr {
     border: 1px solid black;
+}
+
+.section { 
+    transition: transform 1s, opacity 1s;
+}
+  
+.section-hidden {
+    opacity: 0;
+    transform: translateY(8rem);
 }
 
 #galeria {
@@ -281,6 +294,10 @@ hr {
     margin-bottom: 15px;
 }
 
+#registo textarea {
+    resize:none;
+}
+
 #formulario {
     padding: 50px;
     flex: 4;
@@ -320,28 +337,35 @@ hr {
 }
 
 #social-media {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+    height: 15rem;
     color: white;
+    text-align: center;
 }
 
 #social {
     max-width: 1024px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #social img {
-    height: 30px;
-    padding-right: 10px;
+    height: 4rem;
+    padding-right: 1rem;
 }
 
 #social a {
     text-decoration: none;
     color: white;
+    margin: 2rem;
     display: flex;
     align-items: center;
-    padding-bottom: 30px;
+}
+
+.footer-p {
+    padding: 1rem 1rem 0rem 1rem;
 }
 
 #mob-wrapper {

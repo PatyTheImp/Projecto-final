@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Paty Arts</title>
 
     <!-- Google Fonts -->
@@ -11,6 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Meu JS -->
+    <script defer src="script.js"></script>
 </head>
 <body id="id-body">
     
@@ -68,7 +73,7 @@
 
         <!-- Slide de imagens -->
         <div class="carousel">
-            <img id="slide-part1" src="imagens/conjuntoImg2.jpg" alt="">
+            <img id="slide-part1" class="lazy-img" src="imagens/lazyConjuntoImg2.png" alt="mockups" data-src="imagens/conjuntoImg2.jpg">
             <p>This are mockups, not real merch.</p>
         </div>
         <!-- Introdução -->
@@ -83,10 +88,12 @@
     <!-- Galeria com desenhos e animações -->
     <div id="galeria">
 
+        <div id="drawings-title"></div>
+
         <!-- Section Drawings -->
         <div class="section">
             <div class="titulos">
-                <h1 id="drawings-title">Drawings</h1>
+                <h1>Drawings</h1>
             </div>
             <!-- Tabs para seleção de subcategorias -->
             <div class="drawings_tab-container">
@@ -114,7 +121,7 @@
                     </div>
                     <div>
                         <img class="galeria-img" src="imagens/gold_texture.png" alt="">
-                        <p id="objectos-div">Gold texture</p>
+                        <p>Gold texture</p>
                         <p class="assinatura">by Paty Costa</p>
                     </div>
                 </div>
@@ -164,7 +171,7 @@
                     </div>
                     <div>
                         <img class="galeria-img" src="imagens/espada_jade.png" alt="">
-                        <p id="personagens-div">Jade sword</p>
+                        <p>Jade sword</p>
                         <p class="assinatura">by Paty Costa</p>
                     </div>
                 </div>
@@ -196,10 +203,12 @@
             </div>
         </div><!--section-->
 
+        <div id="simples-div"></div>
+
         <!-- Section Animations -->
         <div class="section">
             <div class="titulos">
-                <h1 id="simples-div">Animations</h1>
+                <h1>Animations</h1>
             </div>
             <div class="animations_tab-container">
                 <button class="animations_tab animations_tab-active" data-tab="1">Simple animations</button>
@@ -300,15 +309,14 @@
     <hr>
 
     <!-- Carta de apresentação -->
-    <div class="titulos">
-        <h1>About me</h1>
-    </div>
-
-    <div id="sobre-mim">
-
-        <img src="imagens/eu.jpg" alt="">
-        <p>Hi, my name's Patrícia Costa. Anytime I have free time, I like to dedicate to my pixel art hobby. For a long time, I have a personal goal of making video games. Because of that, I decided to learn pixel art so I could make my own assets. I ended up falling in love with the art!</p>
-
+    <div class="section">
+        <div class="titulos">
+            <h1>About me</h1>
+        </div>
+        <div id="sobre-mim">
+            <img src="imagens/eu.jpg" alt="">
+            <p>Hi, my name's Patrícia Costa. Anytime I have free time, I like to dedicate to my pixel art hobby. For a long time, I have a personal goal of making video games. Because of that, I decided to learn pixel art so I could make my own assets. I ended up falling in love with the art!</p>
+        </div>
     </div>
 
     <div id="registo-div"></div>
@@ -316,67 +324,44 @@
     <hr>
 
     <!-- Registo -->
-    <div class="titulos">
-        <h1>Contact</h1>
+    <div class="section">
+        <div class="titulos">
+            <h1>Contact</h1>
+        </div>
+        <div id="registo">
+            <form id="formulario">
+                <h3>Hey! C'mon, send me a message 😉</h3>
+                <label for="txtnome">NAME:</label>
+                <input type="text" id="txtnome" placeholder="Paty Costa" required>
+                <label for="txtmail">E-MAIL:</label>
+                <input type="email" id="txtmail" placeholder="paty@gmail.com" required>
+                <label for="message">MESSAGE:</label>
+                <textarea name="message" cols="30" rows="10" required></textarea>
+                <button class="form-btn" type="submit" data-img="imagens/thankYouSparkle.gif">SEND</button>
+            </form>
+            <img src="imagens/form.gif" alt="form" height="50">
+        </div>
     </div>
-
-    <div id="registo">
-        <form id="formulario">
-            <h3>Hey! C'mon, send me a message 😉</h3>
-
-            <label for="txtnome">NAME:</label>
-            <input type="text" id="txtnome" placeholder="Paty Costa" required> 
-
-            <label for="txtmail">E-MAIL:</label>
-            <input type="email" id="txtmail" placeholder="paty@gmail.com" required>
-
-            <label for="message">MESSAGE:</label>
-            <textarea name="message" cols="30" rows="10" required></textarea>
-
-            <button class="form-btn" type="submit">SEND</button>
-        </form>
-
-        <img src="imagens/analogos_bg.png" alt="ponte 25 de abril" height="50">
-    </div>
-
-    <div id="social-div"></div>
 
     <!-- Redes Sociais -->
     <div id="social-media">
-        <div class="titulos">
-            <h1>Social Media</h1>
-        </div>
 
         <div id="social">
 
-            <a href="https://pt-pt.facebook.com/">
-                <img src="imagens/facebook-f-brands.svg" alt="">
-                <p>Facebook</p>
+            <a href="https://github.com/PatyTheImp" target="_blank">
+                <img src="imagens/github.svg" alt="">
+                <p>GitHub</p>
             </a>
 
-            <a href="https://twitter.com/">
-                <img src="imagens/twitter-brands.svg" alt="">
-                <p>Twitter</p>
-            </a>
-
-            <a href="https://pt.linkedin.com/">
-                <img src="imagens/linkedin-in-brands.svg" alt="">
-                <p>Linkedin</p>
-            </a>
-
-            <a href="https://www.instagram.com/">
-                <img src="imagens/instagram-brands.svg" alt="">
-                <p>Instagram</p>
+            <a href="https://www.linkedin.com/in/patr%C3%ADcia-costa-032b4018b/" target="_blank">
+                <img src="imagens/linkedin.svg" alt="">
+                <p>LinkedIn</p>
             </a>
             
         </div>
+
+        <p class="footer-p">Portfolio made only using HTML5 + CSS3 + JS and Leaflet library.</p>
     </div>
-
-    <footer>
-        <img src="imagens/game boy.png" alt="">
-    </footer>
-
-    <script src="script.js"></script>
 
 </body> 
 </html>

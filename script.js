@@ -12,6 +12,10 @@ const header = document.querySelector('header');
 const headerHeight = header.getBoundingClientRect().height;
 const bigHeader = document.querySelector('.bigHeader');
 const carousel = document.querySelector('#slide-part1');
+const allSections = document.querySelectorAll('.section');
+const carouselImg = document.querySelector('#slide-part1');
+const formButton = document.querySelector('.form-btn');
+const form = document.querySelector('#formulario');
 
 const abrirImg = function(e){
 
@@ -100,3 +104,53 @@ const bigHeaderObserver = new IntersectionObserver(stickyHeader, {
     threshold: 0,
 });
 bigHeaderObserver.observe(bigHeader);
+
+//Reveal sections
+const revealSection = function(entries, observer){
+    
+    const [entry] = entries;
+  
+    if (!entry.isIntersecting)
+      return;
+  
+    entry.target.classList.remove('section-hidden');
+    observer.unobserve(entry.target);
+  }
+  
+  const sectionObserver = new IntersectionObserver(revealSection, {
+  
+    root: null,
+    threshold: .15,
+  });
+  
+  allSections.forEach(function(section){
+  
+    sectionObserver.observe(section);
+    section.classList.add('section-hidden');
+  });
+
+//Lazy loading images
+const loadImg = function(){
+
+    //Replace src with data-src
+    carouselImg.src = carouselImg.dataset.src;
+    console.log(carouselImg.src);
+    
+    carouselImg.addEventListener('load', function(){
+  
+        carouselImg.classList.remove('lazy-img');
+    });
+}
+
+loadImg();
+
+//Form submit
+form.addEventListener('submit', function(e){
+
+    e.preventDefault();
+
+    img.src = formButton.dataset.img;
+
+    section.classList.remove('escondido');
+    body.classList.add('barra-y-escondida');
+});
