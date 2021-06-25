@@ -16,6 +16,7 @@ const allSections = document.querySelectorAll('.section');
 const carouselImg = document.querySelector('#slide-part1');
 const formButton = document.querySelector('.form-btn');
 const form = document.querySelector('#formulario');
+const btnFecharMob = document.querySelector('.btn-fechar-mob');
 
 const abrirImg = function(e){
 
@@ -41,8 +42,13 @@ btnFechar.addEventListener('click', function(){
 
 burgerMenu.addEventListener('click', function(){
 
-    mobNav.classList.toggle('mob-nav-show');
+    mobNav.classList.add('mob-nav-show');
 });
+
+btnFecharMob.addEventListener('click', function(){
+
+    mobNav.classList.remove('mob-nav-show');
+})
 
 //Smooth scrolling
 const smoothScroll = function(e){
@@ -134,7 +140,6 @@ const loadImg = function(){
 
     //Replace src with data-src
     carouselImg.src = carouselImg.dataset.src;
-    console.log(carouselImg.src);
     
     carouselImg.addEventListener('load', function(){
   
@@ -154,3 +159,24 @@ form.addEventListener('submit', function(e){
     section.classList.remove('escondido');
     body.classList.add('barra-y-escondida');
 });
+
+//Map
+const coords = [38.675077, -9.164883];
+const map = L.map('map').setView(coords, 10);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker(coords).addTo(map)
+    .bindPopup(L.popup({
+
+        autoClose: false,
+        closeOnClick: false,
+        closeButton: false,
+        className: "my-popup"
+    }))
+    .setPopupContent("I'm here 👋🏻")
+    .openPopup();
+
+console.log(map);

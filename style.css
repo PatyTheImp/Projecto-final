@@ -270,16 +270,27 @@ hr {
     align-items: center;
 }
 
-#sobre-mim img {
-    width: 100px;
-    flex: 1;
+ #sobre-mim #map {
+    flex: 2;
     padding-right: 50px;
-}
+    height: 15rem; 
+    background-color: var(--dark);
+    margin-right: 2rem;
+} 
 
 #sobre-mim p {
     width: 60%;
-    flex: 4;
+    flex: 3;
     font-size: 25px;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.leaflet-popup .leaflet-popup-tip {
+    background-color: var(--dark);
 }
 
 #registo {
@@ -414,19 +425,29 @@ hr {
     }
 
     .mob-nav-hide {
+        background-color: var(--dark);
+        color: var(--light);
         display: none;
     }
 
     .mob-nav-show {
-        display: block;
-        position: absolute;
-        padding-top: 10px;
+        display: block; 
+        position: fixed;
+        margin-top: -5rem;
+        padding-top: 2rem;
+        /* width: 100px; */
+        height: 100%;
+        transform:translateX(-80px);
+    }
+
+    .mob-logo {
+        display: flex;
+        flex-direction: column;
     }
 
     .nav-button {
-        background-color: #2a2a2a;
+        
         padding: 15px 30px;
-        margin-left: -95px;
         text-align: center;
         font-weight: bold;
     }
@@ -439,24 +460,20 @@ hr {
         width: 45%;
     }
 
-    #sobre-mim img {
+    #sobre-mim #map {
         display: none;
+    }
+
+    #sobre-mim p {
+        margin: 20px;
     }
 
     #registo img {
         display: none;
     }
 
-    footer {
-        display: none;
-    }
-
     #social p {
         display: none;
-    }
-
-    #sobre-mim p {
-        margin: 20px;
     }
 }
 

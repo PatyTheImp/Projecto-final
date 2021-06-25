@@ -13,7 +13,11 @@
 
     <!-- Meu CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="leaflet.css">
 
+    <!-- Leaflet JS -->
+    <script defer src="leaflet.js"></script>
     <!-- Meu JS -->
     <script defer src="script.js"></script>
 </head>
@@ -49,12 +53,12 @@
             <div id="mob-wrapper">
                 <img src="imagens/icon-burger-menu.svg" alt="Mobile Menu Icon" style="width: 40px;" class="burger-menu">
                 <div id="mob-nav" class="mob-nav-hide">
-                    <div>
-                        <a href="index.html" class="logo">
+                        
+                        <div class="logo mob-logo">
+                            <span class="btn-fechar-mob">&#10006;</span>
                             <img src="imagens/girl_walking.gif" alt="logo" height="64px">
                             <p>Paty Arts</p>
-                        </a>
-                    </div>
+                        </div>
                     <div class="nav-button">
                         <a href="#drawings-title">DRAWINGS</a>
                     </div>
@@ -314,8 +318,9 @@
             <h1>About me</h1>
         </div>
         <div id="sobre-mim">
-            <img src="imagens/eu.jpg" alt="">
-            <p>Hi, my name's Patrícia Costa. Anytime I have free time, I like to dedicate to my pixel art hobby. For a long time, I have a personal goal of making video games. Because of that, I decided to learn pixel art so I could make my own assets. I ended up falling in love with the art!</p>
+            <div id="map"></div>
+
+            <p>Hi, my name's Patrícia Costa. Anytime I have free time, I like to dedicate to my pixel art hobby. For a long time, I have a personal goal of making video games. Because of that, I decided to learn pixel art so I could make my own assets. I ended up falling in love with the art!</p>       
         </div>
     </div>
 
