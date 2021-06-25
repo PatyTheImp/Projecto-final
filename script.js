@@ -8,6 +8,10 @@ const burgerMenu = document.querySelector('.burger-menu');
 const navbuttons = document.querySelector('.navbuttons');
 const drawingsTabContainer = document.querySelector('.drawings_tab-container');
 const animationsTabContainer = document.querySelector('.animations_tab-container');
+const header = document.querySelector('header');
+const headerHeight = header.getBoundingClientRect().height;
+const bigHeader = document.querySelector('.bigHeader');
+const carousel = document.querySelector('#slide-part1');
 
 const abrirImg = function(e){
 
@@ -71,3 +75,28 @@ const changeTabs = function(e){
 
 drawingsTabContainer.addEventListener('click', changeTabs.bind('drawings'));
 animationsTabContainer.addEventListener('click', changeTabs.bind('animations'));
+
+//Sticky header
+const stickyHeader = function(entries){
+
+    const [entry] = entries;
+
+    if (entry.isIntersecting){
+
+        header.classList.remove('sticky');
+        carousel.classList.remove('sticky');
+    }      
+    else{
+
+        header.classList.add('sticky');
+        carousel.classList.add('sticky');
+    }
+        
+}
+
+const bigHeaderObserver = new IntersectionObserver(stickyHeader, {
+
+    root: null,
+    threshold: 0,
+});
+bigHeaderObserver.observe(bigHeader);

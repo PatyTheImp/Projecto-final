@@ -1,7 +1,7 @@
 :root {
     --light: #d5d5d5;
     --dark: #2a2a2a;
-    --gradient: linear-gradient(45deg, #c31432, #240b36);
+    --gradient: linear-gradient(45deg, #8360c3, #2ebf91);
     --borda: 3px;
 }
 
@@ -15,11 +15,22 @@ body {
 header {
     background-color: var(--dark);
     height: 80px;
-    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 50;
+}
+
+header.sticky {
+    position: fixed;
+    opacity: .3;
+    transition: 1s;
+}
+
+header.sticky:hover {
+    opacity: 1;
+    transition: 1s;
 }
 
 a {
@@ -43,7 +54,7 @@ a {
     transition: .3s;
 }
 
-#logo {
+.logo {
     margin-left: 20px;
     display: flex;
     justify-content: space-between;
@@ -54,12 +65,15 @@ a {
 }
 
 #slide-part1 {
-    margin-top: 80px;
     width: 640%;
     animation-name: deslize-1;
     animation-duration: 8s;
     animation-iteration-count:infinite;
     animation-timing-function: linear;
+}
+
+#slide-part1.sticky {
+    margin-top: 80px;
 }
 
 @keyframes deslize-1 {
@@ -212,7 +226,7 @@ hr {
     height: 100%;
     position: fixed;
     top: 0;
-    filter: grayscale(0%);
+    z-index: 100;
 }
 
 .galeria-selected div {
@@ -348,7 +362,7 @@ hr {
 @media (max-width: 950px) {
 
    header {
-        position: relative;
+        display: none;
    }
 
     .carousel {
@@ -359,9 +373,20 @@ hr {
         display: none;
     }
 
+    .mob-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
     #mob-wrapper {
         display: block;
-        padding-right: 30px;
+        position: fixed;
+        padding: 10px 15px 10px 15px;
+        margin: 1rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 100%;
+        z-index: 50;
     }
 
     .mob-nav-hide {
@@ -374,21 +399,16 @@ hr {
         padding-top: 10px;
     }
 
-    #drop-desenhos, #drop-anim {
-        display: none;
-        margin-bottom: -15px;
-    }
-
-    #drop-desenhos .nav-button, #drop-anim .nav-button {
-        margin-left: -30px;
-    }
-
     .nav-button {
         background-color: #2a2a2a;
         padding: 15px 30px;
         margin-left: -95px;
         text-align: center;
         font-weight: bold;
+    }
+
+    #intro {
+        padding-top: 4rem;
     }
 
     .galeria-linha div {
@@ -421,10 +441,12 @@ hr {
 
     .drawings_tab-container {
         flex-direction: column;
+        padding: 2rem;
     }
 
     .animations_tab-container {
         flex-direction: column;
+        padding: 2rem;
     }
 
     .galeria-linha div {
