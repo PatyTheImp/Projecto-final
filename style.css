@@ -276,6 +276,7 @@ hr {
     height: 15rem; 
     background-color: var(--dark);
     margin-right: 2rem;
+    z-index: 1;
 } 
 
 #sobre-mim p {
