@@ -223,7 +223,7 @@ hr {
 }
 
 .galeria-img:hover {
-    transform: translate(10px, 10px);
+  transform: translate(10px, 10px);
 }
 
 .galeria-linha div p {
